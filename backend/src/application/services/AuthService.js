@@ -1,11 +1,12 @@
 const jwt = require('jsonwebtoken');
 const { UserRepositorySQLite, createUserRepository } = require('../../infrastructure/repositories/UserRepositorySQLite');
+const { secret, expiresIn } = require('../../config/auth');
 
 class AuthService {
     constructor(userRepository) {
         this.userRepository = userRepository;
     }
-
+    
     async login(email, password) {
         // Busca usuário pelo email
         const users = await this.userRepository.getAll();
