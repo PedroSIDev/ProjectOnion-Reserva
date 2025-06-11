@@ -11,19 +11,25 @@ let userRepository;
 createUserRepository().then(repo => { userRepository = repo; });
 
 // Route to create a new user
-router.post('/', authMiddleware, async (req, res) => {
+router.get('/', authMiddleware, async (req, res) => {
     try {
-        const user = await CreateUser.execute(req.body);
-        res.status(201).json(user);
+        const listUsers = new ListUsers(userRepository);
+        console.log('Chamando listagem de usuários');
+        const users = await listUsers.execute();
+        console.log('Usuários encontrados:', users);
+        res.status(200).json(users);
     } catch (error) {
-        res.status(400).json({ message: error.message });
+        res.status(500).json({ message: error.message });
     }
 });
 
 // Route to list all users (admin only)
 router.get('/', authMiddleware, async (req, res) => {
     try {
-        const users = await ListUsers.execute();
+        const listUsers = new ListUsers(userRepository);
+        console.log('Chamando listagem de usuários');
+        const users = await listUsers.execute();
+        console.log('Usuários encontrados:', users);
         res.status(200).json(users);
     } catch (error) {
         res.status(500).json({ message: error.message });

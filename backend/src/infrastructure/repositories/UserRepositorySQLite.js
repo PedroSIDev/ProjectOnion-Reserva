@@ -14,14 +14,7 @@ class UserRepositorySQLite extends UserRepository {
         return { id: result.lastID, ...user };
     }
     
-    async findAll() {
-    return new Promise((resolve, reject) => {
-        this.db.all('SELECT * FROM users', [], (err, rows) => {
-        if (err) return reject(err);
-        resolve(rows);
-        });
-    });
-    }
+
 
     async getById(id) {
         const user = await this.db.get('SELECT * FROM users WHERE id = ?', [id]);

@@ -1,12 +1,9 @@
 class ListUsers {
-  constructor(userRepository) {
-    this.userRepository = userRepository;
-  }
-
-  async execute() {
-    // Retorna todos os usuários
-    return await this.userRepository.findAll();
-  }
+    constructor(userRepository) {
+        this.userRepository = userRepository;
+    }
+    async execute() {
+        return await this.userRepository.getAll();
+    }
 }
-
-module.exports = ListUsers;
+module.exports = { ListUsers };
