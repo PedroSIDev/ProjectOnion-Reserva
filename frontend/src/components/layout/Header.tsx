@@ -24,7 +24,7 @@ const Header = () => {
                         <div className="grid gap-2 py-6">
                             <Link
                                 href="#"
-                                className="flex w-full items-center py-2 text-lg font-semibold text-white bg-transparent border border-white/30 backdrop-blur-md rounded-lg hover:bg-white/10 transition"
+                                className="flex w-full items-center py-2 text-lg font-semibold text-black bg-transparent border border-white/30 backdrop-blur-md rounded-lg hover:bg-white/10 transition"
                                 prefetch={false}
                             >
                                 <CarIcon className="h-5 w-5 mr-2 text-white" />
@@ -32,7 +32,7 @@ const Header = () => {
                             </Link>
                             <Link
                                 href="#"
-                                className="flex w-full items-center py-2 text-lg font-semibold text-white bg-transparent border border-white/30 backdrop-blur-md rounded-lg hover:bg-white/10 transition"
+                                className="flex w-full items-center py-2 text-lg font-semibold text-black bg-transparent border border-white/30 backdrop-blur-md rounded-lg hover:bg-white/10 transition"
                                 prefetch={false}
                             >
                                 <CarIcon className="h-5 w-5 mr-2 text-white" />
@@ -40,7 +40,7 @@ const Header = () => {
                             </Link>
                             <Link
                                 href="#"
-                                className="flex w-full items-center py-2 text-lg font-semibold text-white bg-transparent border border-white/30 backdrop-blur-md rounded-lg hover:bg-white/10 transition"
+                                className="flex w-full items-center py-2 text-lg font-semibold text-black bg-transparent border border-white/30 backdrop-blur-md rounded-lg hover:bg-white/10 transition"
                                 prefetch={false}
                             >
                                 <CarIcon className="h-5 w-5 mr-2 text-white" />
@@ -48,7 +48,7 @@ const Header = () => {
                             </Link>
                             <Link
                                 href="#"
-                                className="flex w-full items-center py-2 text-lg font-semibold text-white bg-transparent border border-white/30 backdrop-blur-md rounded-lg hover:bg-white/10 transition"
+                                className="flex w-full items-center py-2 text-lg font-semibold text-black bg-transparent border border-white/30 backdrop-blur-md rounded-lg hover:bg-white/10 transition"
                                 prefetch={false}
                             >
                                 <CarIcon className="h-5 w-5 mr-2 text-white" />
